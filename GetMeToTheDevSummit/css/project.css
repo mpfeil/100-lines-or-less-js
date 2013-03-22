@@ -1,0 +1,206 @@
+html, body, #map
+{
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+body 
+{
+	background-color:#FFF;
+    overflow:hidden;
+    font-family:"Trebuchet MS";
+}
+
+h1 {	margin:4px; font-size:150%; text-align:center;}
+h2 { text-align:center; font-size:130%;}
+
+.hideme
+{
+	display:none;
+	height: 0;
+	width: 0;
+}
+#search 
+{
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 74px;
+}
+#map_container
+{
+	position:absolute;
+	top: 0;
+	left: 0;
+	right: 280px;
+	bottom: 0;
+}
+#dir_container
+{
+	position:absolute;
+	top: 0;
+	right: 0;
+	width: 280px;
+	bottom: 0;
+	background:#FFFFCC;
+	overflow: auto;
+	text-align:center;
+}
+#map_here
+{
+	width: 576px;
+	height: 480px;
+	overflow:hidden;
+	margin: 10px auto;
+	border:0;
+}
+#dir_here
+{
+	margin:5px auto;
+	width:576px;
+}
+#print_container
+{
+	width:100%;
+	height:100%;
+	overflow:auto;
+	z-index:3;
+	background:#bbb;
+}
+
+
+ul, ol
+{
+	list-style-type:none; 
+	margin: 5px;
+	padding: 0;
+}
+
+li
+{
+	padding:0;
+	margin:2px 4px;
+	border-bottom: 1px solid #CCCC99;
+	cursor:pointer;
+}
+
+#print_container li
+{
+	border:0;
+	padding: 3px 10px;
+	max-width: 576px;
+}
+ol.directions>li:hover
+{
+	background:#FFFF55;
+	font-weight:bold;
+}
+
+ul.nav
+{
+	text-align:center;
+}
+ul.nav>li
+{
+	display: inline-block;
+}
+
+.btn
+{
+	text-decoration:none;
+	background:#848453;
+	padding: 4px;
+	color: White;
+	font-weight:bold;
+	-moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -khtml-border-radius: 12px;
+    border-radius: 12px;
+}
+.wait, .wait #map
+{
+	cursor: wait !important;
+}
+ol.directions>li
+{
+	position:relative;
+}
+span.miles
+{
+	float:right;
+	width: 90px;
+	display:inline-block;
+	text-align:right;
+}
+
+li>p
+{
+	margin:0;
+	padding:0;
+	width:60%;
+	display:inline-block;
+	text-align:left;
+}
+
+.page
+{
+	width: 100%;
+	max-width:816px;
+	height: 100%;
+	background:white;
+	z-index:inherit;
+	position:relative;
+	overflow:auto;
+	margin: 10px auto;
+	-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px#888;
+	box-shadow: 0 0 5px 5px #888;
+}
+
+button.close
+{
+	background: red;
+	border: 1px outset #AA0000;
+	color:white;
+	font-weight:bold;
+	float:right;
+}
+
+#instructions
+{
+	margin: 5px;
+	border: 1px solid #CCCC99;
+	padding: 5px;
+	
+	-moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -khtml-border-radius: 12px;
+    border-radius: 12px;
+}
+
+@media screen and (max-width:640px)
+{
+	#map_container
+	{	
+		position:absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom:25%;
+		overflow:hidden;
+	}
+	#dir_container
+	{
+		position:absolute;
+		top: 75%;
+		right: 0;
+		left:0;
+		bottom: 0;
+		width: auto;
+		background:#FFFFCC;
+		overflow: auto;
+	}
+}

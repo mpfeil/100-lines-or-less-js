@@ -1,0 +1,128 @@
+html, body {
+    width: 100%;
+    height: 768px;
+    margin: 0;
+    padding: 0;
+    overflow:hidden; /* Hide bottom overflow of map */
+	font-family: "Lucida Grande","Seoge UI","Arial",sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #666;
+	background-color: light gray;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    max-height: 640px;
+}
+
+a {
+	text-decoration: none;
+	color: #4572a7;
+}
+
+#results {
+	border-left: 2px solid silver;
+	width:  400px;
+	font-family: 'Libre Baskerville', serif;
+	background: rgb(238,238,238); /* Old browsers */
+/*
+	background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(204,204,204,1))); 
+	background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+	background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); 
+	background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); 
+	background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+*/	
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#search {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	top: 20px;
+	left: 74px;
+}
+
+#wd {
+	left:10%;
+	top:10%;
+	background-color: white;
+	width: 350px;
+}
+
+#welcomeDiv {
+	padding: 10px;
+	text-decoration: none;
+}
+
+#name {
+	padding-bottom: 15px;
+	font-size: 20px;
+	text-align: center;
+	max-height: 14px;
+    max-width: 400px;
+}
+
+.infoPanel{	
+	height: 30%;
+    margin-bottom: 5px;
+    max-height: 75px;
+    border-radius: 0;
+    box-shadow: 0;
+}
+
+#source {
+	text-align: center;
+	font-size: 12px;
+}
+
+#controlsLL {
+    bottom: 5px;
+    position: absolute;
+    left: 5px;
+    z-index: 30;
+}
+
+#information {
+	background-image: url("information.png");
+	background-repeat: no-repeat;
+	cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    vertical-align: bottom;
+    width: 25px;
+    z-index: 30;
+}
+
+.claro .dijitTooltipConnector {
+	display: none;
+}
+
+.dijitTooltipDialogPopup {
+	margin-left: 10px;
+}
+
+.esriPopup .titlePane {
+	font-family: 'Libre Baskerville',serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 25px;
+    height: 21px;
+}
+
+.esriPopup a {
+	text-decoration: none;
+	color: #4572a7;
+}

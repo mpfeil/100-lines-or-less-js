@@ -1,0 +1,131 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow:hidden; /* Hide bottom overflow of map */
+	font-family: "Lucida Grande","Seoge UI","Arial",sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #666;
+	background-color: #fff;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #4572a7;
+}
+
+#results {
+	border-left: 2px solid silver;
+	width:  400px;
+	font-family: 'Libre Baskerville', serif;
+	background: rgb(238,238,238); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#search {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	top: 20px;
+	left: 74px;
+}
+
+#wd {
+	left:30%;
+	top:30%;
+	background-color: white;
+	width: 500px;
+}
+
+#welcomeDiv {
+	padding: 10px;
+	text-decoration: none;
+}
+
+#warningDiv {
+	display: none;
+}
+
+#name {
+	padding-bottom: 15px;
+	font-size: 20px;
+	text-align: center;
+	max-height: 14px;
+    max-width: 400px;
+}
+
+.infoPanel{
+	
+	height: 30%;
+	border-radius: 10px 10px 10px 10px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.6);
+    height: 30%;
+    margin-bottom: 10px;
+    min-height: 200px;
+}
+
+#source {
+	text-align: center;
+	font-size: 12px;
+}
+
+#controlsLL {
+    bottom: 5px;
+    position: absolute;
+    left: 5px;
+    z-index: 30;
+}
+
+#information {
+	background-image: url("information.png");
+	background-repeat: no-repeat;
+	cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    vertical-align: bottom;
+    width: 25px;
+    z-index: 30;
+}
+
+.claro .dijitTooltipConnector {
+	display: none;
+}
+
+.dijitTooltipDialogPopup {
+	margin-left: 10px;
+}
+
+.esriPopup .titlePane {
+	font-family: 'Libre Baskerville',serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 25px;
+    height: 21px;
+}
+
+.esriPopup a {
+	text-decoration: none;
+	color: #4572a7;
+}

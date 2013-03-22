@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9" />   
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+  <title>Get Me To the Dev-Summit</title>
+  <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/esri/css/esri.css" />
+  <script src="http://serverapi.arcgisonline.com/jsapi/arcgis/3.3"></script>
+  <!--<script type="text/javascript" src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>-->
+  <!-- Load your project JavaScript and CSS -->
+  <link rel="stylesheet" type="text/css" href="css/project.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+</head>
+  <body>
+	<div id="map_container" class='contain donotprint'>
+		<div id="search"></div>
+		<div id="map"></div>
+	</div>
+	<div id="dir_container" class='contain donotprint'>
+		<h1>Get me to the Dev Summit</h1>
+		<p> By: <a href="http://www.twitter.com/raykendo">Ken Doman</a></p>
+		<div id="instructions">
+			<p>
+				This application helps you get to ESRI's 2013 International Developer Summit, in Palm Springs, California.
+				Either type in your address in the search box in the upper left hand corner of the map, or if using a mobile
+				device or Wi-Fi, click "Find Me" to find your approximate location. Routing directions will follow.
+			</p>
+		</div>
+		<ul class="nav">
+			<li><button class="btn" id="gotoprint" href="#">Printer Friendly</button></li>
+			<li><button class="btn hideme" id="getmyloc" href="#">Find Me</button></li>
+			<!--<li><a class="btn hideme" id="loadlast" href="#">Load Last Search</a></li>-->
+			<li><button class="btn hideme fullroute" href="#">View Full Route</button></li>
+		</ul>
+		<ol class="directions" id="dir_list">
+		</ol>
+	</div>
+    <div id="print_container" class='contain hideme'>
+		<div class="page">
+			<h2>
+				Get Me to the Dev Summit 
+				<button class="donotprint close" id="gotoapp">X</button>
+			</h2>
+			<div id="print_control" class="donotprint">
+				<ul class="nav">
+					<li><button class="btn" id="printnow">Print Now</button></li>
+					<li><button class="btn fullroute" href="#">View Full Route</button></li>
+				</ul>
+			</div>
+			<div id="map_here">
+			</div>
+			<div id="dir_here">
+			</div>
+		</div>
+	</div>
+	<!-- ArcGIS.js contains the code for the contest entry --> 
+	<script src="js/ArcGIS.js"></script> 
+  </body>
+</html>

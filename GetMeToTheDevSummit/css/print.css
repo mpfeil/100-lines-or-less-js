@@ -1,0 +1,42 @@
+body
+{
+	background:white;
+	font-size:12pt;
+}
+.donotprint, .esriSimpleSlider 
+{
+	display:none;
+	height: 0;
+	width: 0;
+}
+
+#map_here
+{
+	width: 6.0in;
+	height: 5.0in;
+	overflow:hidden;
+	margin:0 auto;
+	padding:0;
+	border:0;
+}
+ol {list-style-type:none; margin:10px auto; padding: 0;}
+
+ul>li, ol>li {margin: 2px; padding: 4px;}
+
+h2 {text-align:center;}
+
+span.miles
+{
+	float:none;
+	text-align:right;
+	display:inline-block;
+	width:1in;
+}
+li>p
+{
+	text-align:left;
+	width:5in;
+	margin:0;
+	padding:0;
+	display:inline-block;
+}

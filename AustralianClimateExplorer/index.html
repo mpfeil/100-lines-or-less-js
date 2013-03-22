@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width"><meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
+    <title>Australian Climate Explorer</title>
+    <link rel="shortcut icon" href="http://fullextent.com.au/assets/ico/favicon.ico">
+    <link rel="icon" type="image/ico" href="http://fullextent.com.au/assets/ico/favicon.ico">
+    <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/dojo/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/esri/css/esri.css" />
+    <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    
+    <!--[if !IE]>-->
+    
+    <link type="text/css" rel="stylesheet" media="only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2)" href="css/iPhone.css" />
+    <link type="text/css" rel="stylesheet" media="only screen and (max-device-width: 480px)" href="css/iPhone.css" />
+    <link type="text/css" rel="stylesheet" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px)" href="css/iPad.css" />
+    <!--<![endif]-->
+    
+    <!--Google Analytics-->
+    <script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34346939-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+    
+ </head>
+<body class="claro">
+	<div id="container" data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design:'headline', gutters:false">
+	
+		<div id="map" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'center'" style="overflow:hidden;">
+			
+			<!--the search gazetteer-->
+			<div id="search"></div>
+			
+			<!--Display a welcome dialog-->
+			<div id="wd" class="esriPopup draggable esriPopupWrapper">
+				<div class="titlePane" style="-moz-user-select: none;">
+					<div class="title">Australian Climate Explorer</div>
+						<div class="titleButton close" onclick="toggleWelcomeDialog();" title="Close"></div>
+					</div>
+				<div id="welcomeDiv">
+					<p>This site shows the monthly rainfall and temperature (min/max) for around 1,500 weather stations across Australia, averaged over the past 20 years. Where available, the average maximum temperature is shown over a number of years.</p>
+					<p>Click on a weather station to see its historical data records.</p>
+					<p>The data is from the Australian Bureau of Meteorology's <a target="_blank" href="http://www.bom.gov.au/climate/data/">Climate Data Online</a> page. Unfortunately this information isn't available in a GIS-ready format, so I wrote a script using Python and BeautifulSoup to download and process the records for each station.</p>
+					<p>Author: <a target="_blank" href="http://twitter.com/stephenlead">Stephen Lead</a> at <a target="_blank" href="http://www.fullextent.com.au">Full Extent</a></p>
+				</div>
+				<div id="warningDiv">
+					<p>Sorry, there's just too much to show on a phone. Try a desktop.</p>
+				</div>
+			</div>
+			
+			<!--allow user to open/close the instructions page-->
+			<div id="controlsLL">
+				<div id="information"></div>	
+			</div>
+		</div>
+	
+		<!--the results panel holds the 3 charts-->
+		<div id="results" dojotype="dijit.layout.ContentPane" region="right">
+			<div id="name">Weather Station Name</div>
+			<div id="rainfall" class="infoPanel"></div>
+			<div id="tempRange" class="infoPanel"></div>
+			<div id="maxTemp" class="infoPanel"></div>
+			<!--link to the source for this station. This is overwritten at runtime with the direct link to each station's data feed-->
+			<div id="source">
+				<span>Source: <a target=_"blank" href="http://www.bom.gov.au/climate/data/">Australian Bureau of Meteorology</a></span>
+			</div>
+		</div>
+	
+	</div>
+	
+	<script type="text/javascript">djConfig={parseOnLoad:true};</script>
+	
+	<!--This sample uses highCharts, which requires jQuery-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+	
+	<!--ArcGIS Server and the 100 lines of code for the comp-->
+	<script type="text/javascript" src="http://serverapi.arcgisonline.com/jsapi/arcgis/?v=3.3compact"></script>
+	<script type="text/javascript" src="js/climateExplorer.js"></script>
+	
+</body>
+</html>

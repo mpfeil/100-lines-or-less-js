@@ -1,0 +1,288 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow:hidden; 
+	font-family: "Lucida Grande","Seoge UI","Arial",sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.wrap { 
+    height:78%; 
+    margin-bottom: 330px;
+}
+
+#map { 
+    margin: 0 auto 0 -303px; 
+    width: 100%; 
+    height:100%; 
+    float:left;      
+}
+
+#hud { 
+    width: 300px; 
+    height:100%; 
+    float: right;  
+    background-color:#5fcdd9;
+    border-left: 3px #037691 solid;
+}
+
+#hud h2 {
+    padding: 0px;
+    width:228px;
+    height: 161px; 
+    margin: -20px 0 0 35px;    
+    text-indent: -9999px;  
+    background:url('../images/logo.png') no-repeat;
+}
+
+#gamestatus {
+    width: 250px;
+    height: 215px;
+    margin: 15px 0 0 25px;
+    text-align: center;
+}
+
+#gamestatus p {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#mistakes {
+    width: 111px;
+    height: 140px;
+    display: block;
+    margin: 0 auto;
+    background: url('../images/hangman_sprite.png') no-repeat;
+}
+
+.hangman1 { background-position: -111px 0px!important; }
+.hangman2 { background-position: -221px 0px!important; }
+.hangman3 { background-position: -331px 0px!important; }
+.hangman4 { background-position: -441px 0px!important; }
+.hangman5 { background-position: -551px 0px!important; }
+.hangman6 { background-position: -661px 0px!important; }
+
+#map  {
+    background: #fff; 
+    min-height: 100px;    
+}
+
+#panel {      
+  left:0;
+  bottom:0;
+  clear: both;
+  width: 100%;
+  height: 22%;
+  min-height: 150px;
+  position:absolute;
+  border-top: 3px #c06e10 solid;
+  background: #000 url('../images/bg_word.jpg') repeat-x top;
+}
+
+.clear {
+    clear:both;        
+}
+
+.esriControlsBR {
+  display: none;
+}
+
+.btnspace {
+    margin-top: 15px;
+}
+
+#wordContainer {
+  height: 50px;  
+  text-align: center;
+  padding-top: -20px; 
+  margin-left: 10px; 
+  margin-top: 7px;
+  text-align:center;
+}
+
+#word {    
+    list-style: none;
+}
+
+#word li {
+    float: left;
+    margin: 0 5px 3px 0;
+    width: 40px;
+    height: 35px;
+    color: #000;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 40px;   
+    border-bottom: 4px solid #000;
+}
+
+#word li:hover {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    border-color: #067893;
+    cursor: pointer;
+}
+
+.answer {
+    font-weight: bold;
+}
+
+.space, #word li.space {
+   border: 0px;
+}
+
+#keyboardContainer {  
+    clear: both;
+    height:90px;
+    padding-top: 3px;
+    background-color: #000;
+    border-top: 3px #000 solid;
+}
+
+.keyboard {
+    margin: 0 auto;
+    width: 610px;
+    list-style: none;
+}
+
+.keyboardline2 {
+    clear: both;
+    width: 522px;
+}
+
+.keyboard li {
+    float: left;    
+    width: 37px;
+    height: 35px;
+    color: #666;
+    padding: 0px;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 35px;
+    text-align: center;
+    margin: 1px 4px 4px 0;    
+}
+
+.keyboard li:hover {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    border-color: #067893;
+    cursor: pointer;
+}
+
+#next {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter:alpha(opacity=99);
+    -moz-opacity:0.99;
+    -khtml-opacity: 0.99;
+    opacity: 0.99;
+}
+
+div.nextcentered {
+    width: 240px;
+    height: 65px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+    filter:alpha(opacity=100);
+    -moz-opacity:1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+            border-radius: 8px;
+}
+
+.overlayapp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter:alpha(opacity=96);
+    -moz-opacity:0.96;
+    -khtml-opacity: 0.96;
+    opacity: 0.96;
+    z-index: 10000;
+}
+
+#loading {
+    color: #fff;
+    display: inline;
+    text-align: center;
+    font-weight: bold;
+}
+
+#loading p {
+    margin-top: 10px;
+}
+
+.hOverlay {
+    display: none;
+    margin-top: -99999999px;
+}
+
+div.centered {
+    position: fixed;
+    width: 450px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -230px;
+}
+
+div.wincentered {
+    color: #fff;
+    position: fixed;
+    width: 240px;
+    height: 140px;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -130px;
+    text-align: center;
+}
+
+.resultTitle {
+    font-size: 50px;
+    margin-bottom: 20px; 
+}
+
+.finishedPoints {
+ margin-bottom: 20px; 
+}
+
+.disableSelection {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*** Scrollbar ***/
+::-webkit-scrollbar{ width: 10px; height: 10px;}
+::-webkit-scrollbar-track-piece{ background-color: #DBDBDB; -webkit-border-radius: 0; }
+::-webkit-scrollbar-thumb:vertical{ height: 5px; background-color: #666; -webkit-border-radius: 3px; }
+::-webkit-scrollbar-thumb:vertical:hover{ background-color: #999; }
+::-webkit-scrollbar-thumb:horizontal{ width: 5px; background-color: #666; -webkit-border-radius: 3px; }
+::-webkit-scrollbar-thumb:horizontal:hover{ background-color: #999; }

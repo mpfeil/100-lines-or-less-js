@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <title>Meet Brazil</title>
+    <link rel="stylesheet" type="text/css" href="style/layout.css">
+	<link rel="stylesheet" href="http://servicesbeta.esri.com/jsapi/arcgis/3.4/js/dojo/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="http://servicesbeta.esri.com/jsapi/arcgis/3.4/js/esri/css/esri.css">
+    <script type="text/javascript">var dojoConfig = { parseOnLoad:true };</script>
+    <script type="text/javascript" src="http://servicesbeta.esri.com/jsapi/arcgis/3.4/"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/gisquiz.js"></script>
+  </head>
+  
+  <body class="claro">
+    <div id="mainWindow" data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design:'headline'"
+    style="width:100%; height:100%;">
+      <div id="header" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">
+        Meet Brazil 
+        <div id="subheader">A fun and informative quiz game to test and inprove your knowledge about Brazil.</div>
+      </div>
+      <div data-dojo-type="dijit.layout.ContentPane" id="leftPane" data-dojo-props="region:'left'" >
+          <div title="Perguntas" selected="true">
+            <div id="perguntasDiv"></div><br />
+			<input type="button" id="responde" value="Check answer."/>
+          </div>
+          <div title="Opções" >
+            <div id="opcoesDiv"></div>
+          </div>
+        
+      </div>
+      <div id="map" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'center'">
+      </div>
+      <div id="footer" dojotype="dijit.layout.ContentPane" region="bottom" >
+        Developed by Marcos Fedato
+      </div>
+    </div>
+  </body>
+</html>

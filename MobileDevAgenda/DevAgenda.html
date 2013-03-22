@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+    <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/dojo/dijit/themes/tundra/tundra.css">
+    <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/esri/css/esri.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script>var dojoConfig = { parseOnLoad: true };</script>
+    <script src="http://serverapi.arcgisonline.com/jsapi/arcgis/3.3compact"></script>
+    <script src="js/agenda.js"></script>
+
+    <title>2013 Esri Developer Summit Agenda Guide</title>
+</head>
+<body>
+
+    <!-- First Page -->
+    <div data-role="page" data-theme="d" id="uxMain">
+        <div data-role="header" data-position="fixed" data-theme="a" data-tap-toggle="false">
+            <h1>Dev Summit 2013</h1>
+            <a href="#popupBasic" data-rel="popup" data-role="button" data-icon="bars" class="ui-btn-right" data-position-to="window" data-transition="pop">Help</a>
+        </div>
+        <div data-role="content">
+                <ul id="uxSessions" data-role="listview" data-filter="true" data-filter-placeholder="Agenda Search..." data-autodividers="true" data-inset="true" class="ui-icon-alt" data-iconshadow="false" data-split-theme="c" data-split-icon="arrow-r">
+                </ul>
+        </div>
+        <div data-role="popup" id="popupBasic" class="ui-content">
+                <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                <h3>Sessions:</h3>
+                <ul>
+                    <li>
+                        Click on the session to get session information.
+                    </li>
+                    <li>
+                        Click on the arrow to open a map showing the location of the session.
+                    </li>
+                </ul>
+                <h3>Map:</h3>
+                <ul>
+                    <li>
+                        Click on the room to view a photo.
+                    </li>
+                    <li>
+                        Click Tools > Find Me to zoom to your current location.<br />
+                        (Your GPS must be turned on for this feature to work).
+                    </li>
+                    <li>
+                        Click Tools > Find Session to zoom to the session location.
+                    </li>
+                </ul>
+            </div>
+    </div>
+    <!-- /page -->
+
+    <!-- Second Page -->
+    <div data-role="page" data-theme="d" id="uxMap">
+        <div data-role="header" data-position="fixed" data-theme="a" data-tap-toggle="false">
+            <a href="#uxMain" data-icon="arrow-l" data-transition="slide" data-direction="reverse">Agenda</a>
+            <h1>Dev Summit 2013</h1>
+            <a href="#popupMenu" data-rel="popup" data-role="button" data-icon="gear" data-inline="true">Tools</a>
+            <div data-role="popup" id="popupMenu" data-theme="a">
+                <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                <a href="#" onclick='getGPS("true");' data-role="button" data-icon="search">Find Me</a>
+                <a href="#" onclick='zoomSession();' data-role="button" data-icon="home">Find Session</a>
+		    </div>
+        </div>
+        <div>
+            <div id="map"></div>
+        </div>
+     </div>
+    <!-- /page -->
+
+    <script type="mustache/x-tmpl" id="uxListTemplate">
+		{{#json}}
+			<li time="{{Time}}" data-theme"d">
+                <a href="http://events.esri.com/bpc/2013/dev_agenda/{{Link}}" target="_blank" style="padding-bottom:0px;padding-top:0px;padding-left:10px">
+                    <h3>{{Title}}</h3>
+                    <p><strong>{{Time}}</strong></p>
+                    <p>{{Room}}</p>
+                </a>
+                <a href="#uxMap" room="{{Room}}" data-transition="slide" data-direction="forward"></a>
+			</li>
+		{{/json}}
+    </script>
+            
+</body>
+</html>

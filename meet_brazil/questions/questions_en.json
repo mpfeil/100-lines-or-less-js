@@ -1,0 +1,92 @@
+[
+	{
+		"enunciado": "What is the form of government addopted in Brazil?",
+		"resposta1": "Monarchy",
+		"resposta2": "Democracy",
+		"resposta3": "Dictatorship‎",
+		"resposta4": "Anarchy",
+		"resposta": 2,
+		"licao": "In 1889 the monarchy ceased to be the system of government adopted by Brazil, but only in 1891 existed the first election that chose Deodoro da Fonseca as the first elected president of the country.",
+		"location": 
+		{
+			"y": -15.801389,
+			"x": -47.860278
+		},
+		"zoom": 17
+	},
+    {
+		"enunciado": "Which is the highest peak in Brazil?",
+		"resposta1": "Pico da Bandeira",
+		"resposta2": "Pico das Agulhas Negras",
+		"resposta3": "Pico da Neblina",
+		"resposta4": "Pico 31 de Março",
+		"resposta": 3,
+		"licao": "With an altitude of 2993.78 meters Pico da Neblina which is near the border between Brazil and Venezuela is the highest peak in Brazil and the world number 114.",
+		"location": 
+		{
+			"y": 0.806667, 
+			"x": -66.005
+		},
+		"zoom": 6
+	},
+	{
+		"enunciado": "Which town is located the tallest building in Brazil?",
+		"resposta1": "Goiás",
+		"resposta2": "São Paulo",
+		"resposta3": "Rio de Janeiro",
+		"resposta4": "Brasília",
+		"resposta": 2,
+		"licao": "The \"Mirante do Vale \" building inaugurated in 1966 and located in the city of São Paulo is the tallest building in Brazil and 18th in South America with 51 floors totaling 170 meters in height.",
+		"location": 
+		{
+			"y": -23.542214,
+			"x": -46.63535
+		},
+		"zoom": 16
+	},
+	{
+		"enunciado": "Which city was the first capital of Brazil?",
+		"resposta1": "Manaus",
+		"resposta2": "Rio de Janeiro",
+		"resposta3": "Salvador",
+		"resposta4": "Brasília",
+		"resposta": 3,
+		"licao": "Salvador (the Bay of All Saints) was chosen as the first capital of Brazil thanks to a document known as \"Royal Regiment \" and occupied the post since its founding in March 29, 1549. In January of 1763 stopped being the capital of Brazil.",
+		"location": 
+		{
+			"y": -12.971111,
+			"x": -38.510833
+		},
+		"zoom": 6
+	},
+	{
+		"enunciado": "Which airport is the most visited Brazil?",
+		"resposta1": "Congonhas",
+		"resposta2": "Guarulhos",
+		"resposta3": "Brasília",
+		"resposta4": "Galeão",
+		"resposta": 2,
+		"licao": "Located in the city of Guarulhos 30km from São Paulo, International Airport of São Paulo / Guarulhos is the busiest airport in Brazil and has served over 29 million passengers in 2011.",
+		"location": 
+		{
+			"y": -23.431944,
+			"x": -46.469444
+		},
+		"zoom": 14
+	},
+	{
+		"enunciado": "Which city is the capital of Brazil?",
+		"resposta1": "Sao Paulo",
+		"resposta2": "Rio de Janeiro",
+		"resposta3": "Goiania",
+		"resposta4": "Brasília",
+		"resposta": 4,
+		"licao": "Conceived by urbanist Lucio Costa and with several buildings designed by Oscar Niemeyer, Brasília was inaugurated by President Juscelino Kubitschek on April 21, 1960, and is the third city to be the capital of Brazil.",
+		"location": 
+		{
+			"y": -15.798889,
+			"x": -47.866667
+		},
+		"zoom": 12
+	}
+]

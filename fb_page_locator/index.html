@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9">   
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title>FB Page Finder</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.3/js/esri/css/esri.css">
+  <script src="http://serverapi.arcgisonline.com/jsapi/arcgis/3.3compact" type="text/javascript"></script>
+  <!-- Load your project JavaScript and CSS -->
+  <link rel="stylesheet" type="text/css" href="css/project.css"/>
+  <!-- ArcGIS.js contains the code for the contest entry --> 
+  <script src="js/ArcGIS.js" type="text/javascript"></script>  
+</head>
+  <body>
+    <div id="container" data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:false">
+      <div id="geocoder"></div>
+      <div id="map" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'center'" style="overflow:hidden;">
+      </div>
+      <div id="floatingDiv">
+	      <div class="Title">Facebook Page Locator</div>
+          <div class="Labels">Buffer Distance (ft.):</div> 
+          <input type="text" id="buffer" value="3000"/><br/>
+          <div class="Labels">Search String:</div>
+          <input type="text" id="search" value=""/><br/>
+          <div class="Labels"># of Results to Return:</div>
+          <input type="text" id="resultsToReturn" value="100"/><br/>
+      </div>
+    </div>
+  </body>
+</html>
