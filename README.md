@@ -18,7 +18,12 @@ Best of luck!
 5. [Map Bookmarks](http://esri.github.com/100-lines-or-less-js/mapbook/index.html) by [davewilton](http://github.com/davewilton)
 6. [Esri Flickr Map](http://esri.github.com/100-lines-or-less-js/esriflickrmap/index.html) by [amshel](http://github.com/amshel)
 7. [County Destroyer!](http://esri.github.com/100-lines-or-less-js/CountyDestroyer/index.html) by [odoe](http://github.com/odoe)
-8. ...
+8. [Get me to the Summit](http://esri.github.com/100-lines-or-less-js/GetMeToTheDevSummit/index.html) by [raykendo](https://github.com/raykendo)
+9. [Facebook Page Finder](http://esri.github.com/100-lines-or-less-js/fb_page_locator/index.html) by [jmschmidt7](https://github.com/jmschmidt7)
+10. [Leafmap](http://esri.github.com/100-lines-or-less-js/leafmap/index.html) by [tmcs](https://github.com/tmcw)
+11. [Mobile Dev Agenda](http://esri.github.com/100-lines-or-less-js/MobileDevAgenda/DevAgenda.html) by [shadcampbell](https://github.com/shadcampbell)
+12. ...
+
 
 ## Contest Period
 - Starts: 9:00 AM PST Friday, Mar 8, 2013
